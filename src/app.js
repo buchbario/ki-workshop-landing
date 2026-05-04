@@ -56,7 +56,7 @@ const modules = [
 const faq = [
   {
     q: 'Brauche ich technische Vorkenntnisse?',
-    a: 'Nein. Der Workshop ist explizit für Founder, Geschäftsführer und Macher — nicht für Entwickler. Wir bauen reale Workflows ohne eine Zeile Code. Wenn du eine E-Mail schreiben kannst, kannst du das hier auch.',
+    a: 'Nein. Der Workshop ist für alle gemacht, die KI praktisch im Alltag einsetzen wollen — egal ob selbstständig, angestellt, in der Geschäftsführung, im Studium oder als Quereinsteiger. Wir bauen reale Workflows ohne eine Zeile Code. Wenn du eine E-Mail schreiben kannst, kannst du das hier auch.',
   },
   {
     q: 'Wie viele Plätze sind noch frei?',
@@ -101,11 +101,11 @@ const gains = [
 ];
 
 const yes = [
-  'Du bist Founder, Geschäftsführer oder selbstständig.',
-  'Du hast ein laufendes Business und willst Zeit zurückgewinnen.',
+  'Du willst KI in deinem Beruf oder Alltag praktisch einsetzen.',
+  'Du willst Zeit für die wirklich wichtigen Dinge zurückgewinnen.',
   'Du willst KI <strong>operativ einsetzen</strong> — nicht nur darüber reden.',
   'Du bist bereit, einen Tag all-in zu gehen — Hands-on, nicht Zuhören.',
-  'Du willst Networking mit Foundern auf Augenhöhe.',
+  'Du willst Austausch mit Gleichgesinnten, die KI ernsthaft nutzen.',
 ];
 
 const no = [
@@ -161,10 +161,6 @@ export function renderApp(root) {
             <a href="#programm" class="btn btn--ghost btn--xl">
               Programm ansehen
             </a>
-            <div class="hero__cta-meta">
-              <span><strong>All-Inclusive</strong> · Essen &amp; Drinks ganztägig</span>
-              <span>Inkl. gemeinsamem Abendessen</span>
-            </div>
           </div>
 
         </div>
@@ -177,7 +173,7 @@ export function renderApp(root) {
             <span class="eyebrow">Erkennst du dich wieder?</span>
             <h2 class="section__title">Du verschwendest <em>Zeit</em>, die du nicht zurückbekommst.</h2>
             <p class="section__lede">
-              Die meisten Founder wissen, dass KI alles ändert. Sie wissen nur nicht, wo sie anfangen sollen — und verlieren jeden Monat tausende Euro an unproduktiven Stunden.
+              Die meisten wissen: KI verändert alles. Aber kaum jemand weiß, wo er anfangen soll — und verliert jeden Monat tausende Euro an Zeit, die nie zurückkommt.
             </p>
           </div>
 
@@ -348,7 +344,7 @@ export function renderApp(root) {
         <div class="footer__inner">
           <div class="footer__brand">
             <img src="/logo.avif" alt="NLC KI Workshop Logo" />
-            <p>NLC KI Workshop · Hands-on KI-Training für Founder, Geschäftsführer und Macher. 12.06.2026 · Nähe Frankfurt am Main.</p>
+            <p>NLC KI Workshop · Hands-on KI-Training für alle, die KI praktisch nutzen wollen. 12.06.2026 · Nähe Frankfurt am Main.</p>
           </div>
           <div class="footer__col">
             <h4>Workshop</h4>

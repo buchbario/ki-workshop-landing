@@ -33,7 +33,7 @@ export function renderLegal({ title, eyebrow, body }) {
         <div class="footer__inner">
           <div class="footer__brand">
             <img src="/logo.avif" alt="NLC KI Workshop Logo" />
-            <p>NLC KI Workshop · Hands-on KI-Training für Founder, Geschäftsführer und Macher. 12.06.2026 · Nähe Frankfurt am Main.</p>
+            <p>NLC KI Workshop · Hands-on KI-Training für alle, die KI praktisch nutzen wollen. 12.06.2026 · Nähe Frankfurt am Main.</p>
           </div>
           <div class="footer__col">
             <h4>Workshop</h4>
