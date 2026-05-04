@@ -33,12 +33,12 @@ const modules = [
   },
   {
     num: '04',
-    title: 'Eigene Workflows mit <em>Claude AI</em> & Cowork bauen — kein Coding nötig',
-    sub: 'Bau eigene KI-Agenten ohne Entwickler. Vom ersten Kontakt bis zum Termin.',
+    title: 'Eigene <em>Dashboards</em> & Tools mit Claude AI bauen — kein Coding nötig',
+    sub: 'Mach deine Daten sichtbar. Bau dir eigene Dashboards und interne Tools — ohne Entwickler-Team.',
     bullets: [
-      'Lead-Gen-Agent mit Web-Recherche',
-      'Auto-Reply mit deinem Tone-of-Voice',
-      'Termin-Buchung ohne Backoffice-Aufwand',
+      '<strong>Live-Dashboards</strong> für deine wichtigsten Zahlen',
+      'Interne Tools für tägliche Prozesse',
+      'Custom Reports &amp; Visualisierungen in Minuten',
     ],
   },
   {
