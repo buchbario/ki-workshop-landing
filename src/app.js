@@ -3,12 +3,12 @@ const TICKET_URL = 'https://www.digistore24.com/product/688172';
 const modules = [
   {
     num: '01',
-    title: 'Buchhaltung automatisieren — Belege, Rechnungen & Reports auf <em>Autopilot</em>',
-    sub: 'Belege per Foto erfasst, Rechnungen automatisch erstellt, DATEV/Lexoffice live angebunden.',
+    title: 'Buchhaltung mit KI — <em>DATEV</em>, Belegprüfung & Reporting',
+    sub: 'Schluss mit dem Beleg-Chaos. KI prüft, sortiert und meldet — du musst nur noch unterschreiben.',
     bullets: [
-      'Belege per Foto in <strong>Sekunden</strong> erfasst',
-      'Rechnungen automatisch erstellt &amp; versendet',
-      'Monats-Reports per Knopfdruck ans Steuerbüro',
+      '<strong>DATEV-Belegprüfung</strong> automatisiert',
+      'Reporting <strong>fehlender Belege</strong> per Knopfdruck',
+      'Monats-Übersicht direkt ans Steuerbüro',
     ],
   },
   {
