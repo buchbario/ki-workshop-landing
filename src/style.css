@@ -507,21 +507,24 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--line);
   background: var(--bg-card);
 }
+.who__head {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 24px;
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text-mute);
+}
+.who__col--yes .who__head { color: var(--accent); }
+.who__col--no .who__head { color: var(--red); }
 .who__title {
   font-family: var(--sans);
   font-weight: 600;
-  font-size: clamp(22px, 2.4vw, 28px);
-  letter-spacing: -0.02em;
-  margin-bottom: 24px;
-  display: flex; align-items: center; gap: 12px;
+  font-size: clamp(22px, 2.4vw, 30px);
+  letter-spacing: -0.025em;
+  margin-bottom: 28px;
+  line-height: 1.2;
 }
-.who__title .ic {
-  width: 32px; height: 32px; border-radius: 50%;
-  display: inline-flex; align-items: center; justify-content: center;
-  font-size: 16px; font-weight: 700;
-}
-.who__col--yes .ic { background: var(--accent); color: var(--accent-ink); }
-.who__col--no .ic { background: rgba(255,82,82,0.15); color: var(--red); }
+.who__col--no .who__title { color: var(--text-dim); }
 .who__list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
 .who__list li {
   display: grid; grid-template-columns: 22px 1fr; gap: 12px;

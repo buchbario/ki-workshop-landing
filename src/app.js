@@ -247,13 +247,15 @@ export function renderApp(root) {
           </div>
           <div class="who">
             <div class="who__col who__col--yes">
-              <h3 class="who__title"><span class="ic">✓</span> Perfekt, wenn…</h3>
+              <div class="who__head">Dieser Workshop ist für dich</div>
+              <h3 class="who__title">Perfekt, wenn…</h3>
               <ul class="who__list">
                 ${yes.map(y => `<li><span class="who__icon">✓</span><span>${y}</span></li>`).join('')}
               </ul>
             </div>
             <div class="who__col who__col--no">
-              <h3 class="who__title"><span class="ic">✕</span> Nicht für dich, wenn…</h3>
+              <div class="who__head">Lieber nicht buchen</div>
+              <h3 class="who__title">Nicht für dich, wenn…</h3>
               <ul class="who__list">
                 ${no.map(n => `<li><span class="who__icon">✕</span><span>${n}</span></li>`).join('')}
               </ul>
