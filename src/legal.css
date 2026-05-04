@@ -1,0 +1,112 @@
+.legal {
+  padding: 80px 0 120px;
+  min-height: 60vh;
+}
+.legal__inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.legal__head {
+  max-width: 760px;
+  margin: 0 auto 56px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--line);
+}
+.legal__title {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(40px, 5.5vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin-top: 16px;
+  hyphens: none;
+}
+.legal__title em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+.legal__body {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-dim);
+}
+.legal__body h2 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(24px, 2.4vw, 30px);
+  letter-spacing: -0.025em;
+  color: var(--text);
+  margin-top: 56px;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+.legal__body h2:first-child { margin-top: 0; }
+.legal__body h2 em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+}
+.legal__body h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--text);
+  margin-top: 28px;
+  margin-bottom: 10px;
+  letter-spacing: -0.015em;
+}
+.legal__body p {
+  margin-bottom: 16px;
+}
+.legal__body p strong {
+  color: var(--text);
+  font-weight: 500;
+}
+.legal__body ul, .legal__body ol {
+  margin: 0 0 18px 24px;
+  padding: 0;
+}
+.legal__body li {
+  margin-bottom: 8px;
+}
+.legal__body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255,252,36,0.4);
+  transition: text-decoration-color .2s ease;
+}
+.legal__body a:hover {
+  text-decoration-color: var(--accent);
+}
+.legal__body .meta {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  width: 100%;
+}
+.legal__body .box {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin: 24px 0;
+}
+.legal__body .box p:last-child { margin-bottom: 0; }
+@media (max-width: 720px) {
+  .legal { padding: 56px 0 80px; }
+  .legal__head { margin-bottom: 36px; }
+  .legal__body { font-size: 15px; }
+}

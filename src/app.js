@@ -53,29 +53,6 @@ const modules = [
   },
 ];
 
-const speakers = [
-  {
-    initials: 'TK',
-    name: 'Thomas Knedel',
-    role: 'Investor · Speaker · Bestseller-Autor',
-  },
-  {
-    initials: 'MY',
-    name: 'Mehmet Yazici',
-    role: 'Founder · KI-Praktiker',
-  },
-  {
-    initials: 'DV',
-    name: 'Daniel Vorreiter',
-    role: 'KI-Builder · Workflow-Experte',
-  },
-  {
-    initials: '+',
-    name: 'Weitere Top-Experten',
-    role: 'Live vor Ort · 12.06.2026',
-  },
-];
-
 const faq = [
   {
     q: 'Brauche ich technische Vorkenntnisse?',
@@ -152,7 +129,6 @@ export function renderApp(root) {
         </a>
         <nav class="nav__links">
           <a href="#programm">Programm</a>
-          <a href="#speaker">Speaker</a>
           <a href="#zielgruppe">Für wen</a>
           <a href="#preis">Preis</a>
           <a href="#faq">FAQ</a>
@@ -191,24 +167,6 @@ export function renderApp(root) {
             </div>
           </div>
 
-          <div class="hero__scarcity">
-            <div class="hero__scarcity-item">
-              <div class="hero__scarcity-label">Termin</div>
-              <div class="hero__scarcity-value">12.06.<em>26</em></div>
-            </div>
-            <div class="hero__scarcity-item">
-              <div class="hero__scarcity-label">Uhrzeit</div>
-              <div class="hero__scarcity-value">10:00–<em>17:30</em></div>
-            </div>
-            <div class="hero__scarcity-item">
-              <div class="hero__scarcity-label">Investition</div>
-              <div class="hero__scarcity-value">599 <em>€</em></div>
-            </div>
-            <div class="hero__scarcity-item">
-              <div class="hero__scarcity-label">Format</div>
-              <div class="hero__scarcity-value"><em>Live</em> · Hands-on</div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -280,29 +238,6 @@ export function renderApp(root) {
         </div>
       </section>
 
-      <!-- SPEAKER -->
-      <section class="section section--soft" id="speaker">
-        <div class="wrap">
-          <div class="section__head">
-            <span class="eyebrow">Mit dabei sind u.a.</span>
-            <h2 class="section__title">Top-Experten. <em>Echte</em> Praktiker.</h2>
-            <p class="section__lede">
-              Keine Berater. Keine Theoretiker. Founder und Builder, die ihre Workflows live aufbauen.
-            </p>
-          </div>
-
-          <div class="speakers">
-            ${speakers.map(s => `
-              <div class="speaker">
-                <div class="speaker__avatar">${s.initials}</div>
-                <div class="speaker__name">${s.name}</div>
-                <div class="speaker__role">${s.role}</div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      </section>
-
       <!-- FOR WHOM -->
       <section class="section section--soft" id="zielgruppe">
         <div class="wrap">
@@ -314,13 +249,13 @@ export function renderApp(root) {
             <div class="who__col who__col--yes">
               <h3 class="who__title"><span class="ic">✓</span> Perfekt, wenn…</h3>
               <ul class="who__list">
-                ${yes.map(y => `<li><span>${y}</span></li>`).join('')}
+                ${yes.map(y => `<li><span class="who__icon">✓</span><span>${y}</span></li>`).join('')}
               </ul>
             </div>
             <div class="who__col who__col--no">
               <h3 class="who__title"><span class="ic">✕</span> Nicht für dich, wenn…</h3>
               <ul class="who__list">
-                ${no.map(n => `<li><span>${n}</span></li>`).join('')}
+                ${no.map(n => `<li><span class="who__icon">✕</span><span>${n}</span></li>`).join('')}
               </ul>
             </div>
           </div>
@@ -416,35 +351,57 @@ export function renderApp(root) {
           <div class="footer__col">
             <h4>Workshop</h4>
             <a href="#programm">Programm</a>
-            <a href="#speaker">Speaker</a>
             <a href="#zielgruppe">Für wen</a>
             <a href="#preis">Preis</a>
             <a href="#faq">FAQ</a>
           </div>
           <div class="footer__col">
             <h4>Kontakt</h4>
-            <a href="mailto:hello@ki-workshop.de">hello@ki-workshop.de</a>
-            <p>Nähe Frankfurt am Main</p>
+            <a href="mailto:info@nolimitclub.de">info@nolimitclub.de</a>
+            <p>No Limit Club GmbH</p>
+            <p>Mainz-Kastel</p>
           </div>
           <div class="footer__col">
             <h4>Rechtliches</h4>
-            <a href="#">Impressum</a>
-            <a href="#">Datenschutz</a>
-            <a href="#">AGB</a>
+            <a href="/impressum.html">Impressum</a>
+            <a href="/datenschutz.html">Datenschutz</a>
+            <a href="/agb.html">AGB</a>
           </div>
         </div>
         <div class="footer__bottom">
-          <span>© 2026 — NLC KI Workshop</span>
+          <span>© 2026 — No Limit Club GmbH</span>
           <span>Abwicklung über Digistore24</span>
         </div>
       </div>
     </footer>
 
-    <div class="sticky-cta">
+    <div class="sticky-cta" data-visible="false">
       <div class="sticky-cta__info">
         <strong>12.06.2026</strong> · 599 € brutto
       </div>
       <a href="${TICKET_URL}" target="_blank" rel="noopener" class="sticky-cta__btn">Spot sichern →</a>
     </div>
   `;
+
+  setupStickyCtaVisibility();
+}
+
+function setupStickyCtaVisibility() {
+  const sticky = document.querySelector('.sticky-cta');
+  const triggers = document.querySelectorAll('.hero__cta-row .btn--primary, .final__cta .btn--primary, .price__cta--accent');
+  if (!sticky || !triggers.length || !('IntersectionObserver' in window)) return;
+
+  const visibility = new Map();
+  const io = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      visibility.set(entry.target, entry.isIntersecting);
+    }
+    const anyVisible = [...visibility.values()].some(Boolean);
+    sticky.dataset.visible = anyVisible ? 'false' : 'true';
+  }, { threshold: 0.1 });
+
+  triggers.forEach((el) => {
+    visibility.set(el, false);
+    io.observe(el);
+  });
 }
